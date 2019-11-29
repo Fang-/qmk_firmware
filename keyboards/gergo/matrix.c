@@ -252,10 +252,10 @@ uint8_t matrix_scan(void)
 
   // Scroll by default, move on layer
   if (layer_state == 0) {
-		  pRprt.h += tbLtCnt * SCROLLSTEP; tbLtCnt = 0;
-		  pRprt.h -= tbRtCnt * SCROLLSTEP; tbRtCnt = 0;
-		  pRprt.v -= tbUpCnt * SCROLLSTEP; tbUpCnt = 0;
-		  pRprt.v += tbDnCnt * SCROLLSTEP; tbDnCnt = 0;
+		  pRprt.x -= tbLtCnt * 10; tbLtCnt = 0;
+		  pRprt.x += tbRtCnt * 10; tbRtCnt = 0;
+		  pRprt.y -= tbUpCnt * 10; tbUpCnt = 0;
+		  pRprt.y += tbDnCnt * 10; tbDnCnt = 0;
   } else {
 		  pRprt.x -= tbLtCnt * TRKSTEP * (layer_state - 1); tbLtCnt = 0;
 		  pRprt.x += tbRtCnt * TRKSTEP * (layer_state - 1); tbRtCnt = 0;
